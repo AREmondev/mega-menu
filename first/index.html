@@ -63,24 +63,69 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-link"><a href="#">Features</a></li>
+                    <li class="nav-link"><a href="#">Features</a>
+                        <ul class="mega-menu">
+                            <li class="nav-mega-list">
+                                <div id="main-mega-menu" class="mega-row">
+                                    <div class="mega-menu-item">
+                                        <ul>
+                                            <h4>Menu Title</h4>
+                                            <li ><a onmouseover="megaImg(event,'https://irp.cdn-website.com/82233b5b/dms3rep/multi/800-560.jpeg')" href="#"> > Commando Dare</a></li>
+                                            <li><a onmouseover="megaImg(event,'https://thumbs.dreamstime.com/b/spilled-cocktail-drink-cocktail-party-image-showing-spilled-drink-spilled-drinks-iconic-parties-like-christmas-new-year-168763917.jpg')" href="#"> > Commando Energy Drink</a></li>
+                                            <li><a onmouseover="megaImg(event,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA7iikwJ-lwLxOhmagBZWCY8UR2WO1CrsXa7334N3j_rHnGy1YVsG7c5OCshjXXVbPShk&usqp=CAU')" href="#"> > Commando Light</a></li>
+                                            <li><a onmouseover="megaImg(event,'https://4.bp.blogspot.com/-JaisyxriFII/XKrBHoS43uI/AAAAAAAFyn0/ucNF1pxFxVsUm5UHGC01zUMJXnwOUUf8gCLcBGAs/s1600/Hype%2BEnergy-01.jpg')" href="#"> > Commando Original</a></li>
+                                            
+                                        </ul>
+                                        <div class="img-show">
+                                            <img id="mega-img-1" src="https://irp.cdn-website.com/82233b5b/dms3rep/multi/800-560.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="mega-menu-item">
+                                        <ul>
+                                            <h4>Menu Title</h4>
+                                            <li ><a onmouseover="megaImg(event,'https://irp.cdn-website.com/82233b5b/dms3rep/multi/800-560.jpeg')" href="#"> > Commando Dare</a></li>
+                                            <li><a onmouseover="megaImg(event,'https://thumbs.dreamstime.com/b/spilled-cocktail-drink-cocktail-party-image-showing-spilled-drink-spilled-drinks-iconic-parties-like-christmas-new-year-168763917.jpg')" href="#"> > Commando Energy Drink</a></li>
+                                            <li><a onmouseover="megaImg(event,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA7iikwJ-lwLxOhmagBZWCY8UR2WO1CrsXa7334N3j_rHnGy1YVsG7c5OCshjXXVbPShk&usqp=CAU')" href="#"> > Commando Light</a></li>
+                                            <li><a onmouseover="megaImg(event,'https://4.bp.blogspot.com/-JaisyxriFII/XKrBHoS43uI/AAAAAAAFyn0/ucNF1pxFxVsUm5UHGC01zUMJXnwOUUf8gCLcBGAs/s1600/Hype%2BEnergy-01.jpg')" href="#"> > Commando Original</a></li>
+                                            
+                                        </ul>
+                                        <div class="img-show">
+                                            <img id="mega-img-1" src="https://irp.cdn-website.com/82233b5b/dms3rep/multi/800-560.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="mega-menu-item">
+                                        <ul>
+                                            <h4>Menu Title</h4>
+                                            <li ><a onmouseover="megaImg(event,'https://irp.cdn-website.com/82233b5b/dms3rep/multi/800-560.jpeg')" href="#"> > Commando Dare</a></li>
+                                            <li><a onmouseover="megaImg(event,'https://thumbs.dreamstime.com/b/spilled-cocktail-drink-cocktail-party-image-showing-spilled-drink-spilled-drinks-iconic-parties-like-christmas-new-year-168763917.jpg')" href="#"> > Commando Energy Drink</a></li>
+                                            <li><a onmouseover="megaImg(event,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA7iikwJ-lwLxOhmagBZWCY8UR2WO1CrsXa7334N3j_rHnGy1YVsG7c5OCshjXXVbPShk&usqp=CAU')" href="#"> > Commando Light</a></li>
+                                            <li><a onmouseover="megaImg(event,'https://4.bp.blogspot.com/-JaisyxriFII/XKrBHoS43uI/AAAAAAAFyn0/ucNF1pxFxVsUm5UHGC01zUMJXnwOUUf8gCLcBGAs/s1600/Hype%2BEnergy-01.jpg')" href="#"> > Commando Original</a></li>
+                                            
+                                        </ul>
+                                        <div class="img-show">
+                                            <img id="mega-img-1" src="https://irp.cdn-website.com/82233b5b/dms3rep/multi/800-560.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="nav-link"><a href="#">Products</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <script>
-        window.addEventListener('load', (event) => {
             function windowSize(){
-                let megaMenu =  document.getElementsByClassName("mega-menu")[0]
-                console.log(megaMenu, window.innerWidth)
-                megaMenu.style.width = window.innerWidth + 'px';
+                
                 let dE = document.querySelectorAll(".nav-link");
                 for(let i = 0; i < dE.length; i++) {
                     let navLi = dE[i]
                     let position = navLi.getBoundingClientRect().left + window.pageXOffset -  document.documentElement.clientLeft
                     if( navLi.children.length > 1){
                         navLi.classList.add('mega-nav')
+                        navLi.children[1].style.width = window.innerWidth + 'px';
                         navLi.children[1].style.left = -position+ 'px'
                     }else {
                         navLi.classList.remove('mega-nav')
@@ -99,7 +144,6 @@
             console.log(image)
             image[0].src = img
         }
-        })
 
     </script>
 </body>
