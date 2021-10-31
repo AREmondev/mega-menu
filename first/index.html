@@ -70,25 +70,26 @@
         </div>
     </header>
     <script>
-        function windowSize(){
-            let megaMenu =  document.getElementsByClassName("mega-menu")[0]
-            console.log(megaMenu, window.innerWidth)
-            megaMenu.style.width = window.innerWidth + 'px';
-            let dE = document.querySelectorAll(".nav-link");
-            for(let i = 0; i < dE.length; i++) {
-                let navLi = dE[i]
-                let position = navLi.getBoundingClientRect().left + window.pageXOffset -  document.documentElement.clientLeft
-                if( navLi.children.length > 1){
-                    navLi.classList.add('mega-nav')
-                    navLi.children[1].style.left = -position+ 'px'
-                }else {
-                    navLi.classList.remove('mega-nav')
+        window.addEventListener('load', (event) => {
+            function windowSize(){
+                let megaMenu =  document.getElementsByClassName("mega-menu")[0]
+                console.log(megaMenu, window.innerWidth)
+                megaMenu.style.width = window.innerWidth + 'px';
+                let dE = document.querySelectorAll(".nav-link");
+                for(let i = 0; i < dE.length; i++) {
+                    let navLi = dE[i]
+                    let position = navLi.getBoundingClientRect().left + window.pageXOffset -  document.documentElement.clientLeft
+                    if( navLi.children.length > 1){
+                        navLi.classList.add('mega-nav')
+                        navLi.children[1].style.left = -position+ 'px'
+                    }else {
+                        navLi.classList.remove('mega-nav')
+                    }
                 }
             }
-        }
-        windowSize()
-        window.addEventListener('resize', windowSize);
-        function megaImg(event,img){
+            windowSize()
+            window.addEventListener('resize', windowSize);
+            function megaImg(event,img){
             let allMegaLink = document.querySelectorAll("#main-mega-menu li a")
             for(let i = 0; i < allMegaLink.length; i++){
                 allMegaLink[i].classList.remove("active");
@@ -98,7 +99,7 @@
             console.log(image)
             image[0].src = img
         }
-        
+        })
 
     </script>
 </body>
